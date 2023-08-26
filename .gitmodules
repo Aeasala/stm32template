@@ -1,0 +1,4 @@
+[submodule "stm32core"]
+	path = stm32core
+	url = https://github.com/Aeasala/stm32core
+	branch = master

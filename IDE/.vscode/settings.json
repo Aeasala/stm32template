@@ -1,20 +1,23 @@
 {
-    "files.associations": {
-        "*.h": "c",
-        "*.c": "c"
-    },
-    "makefile.launchConfigurations": [
-        {
-            "cwd": "c:\\Users\\evan6\\Documents\\Projects\\VSCode\\stm32template\\",
-            "binaryPath": "c:\\Users\\evan6\\Documents\\Projects\\VSCode\\stm32core\\bin\\stm32core.elf",
-            "includePath": [
-                "stm32core",
-                "stm32core/bsp",
-                "stm32core/bsp/CMSIS/Device/ST/STM32F0xx/Include",
-                "stm32core/bsp/CMSIS/Include",
-                "stm32core/bsp/STM32F0xx_StdPeriph_Driver/inc",
-            ],
-            "binaryArgs": []
-        }
-    ]
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.h": "c",
+			"*.c": "c",
+			"*.a": "c"
+		},
+		"makefile.launchConfigurations": [
+			{
+				"cwd": "bin",
+				"binaryPath": "bin/stm32template.elf",
+				"binaryArgs": []
+			}
+		],
+		"makefile.configurationCachePath": "${workspaceFolder}\\IDE"
+	}
+	
 }

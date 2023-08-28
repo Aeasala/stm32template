@@ -12,17 +12,12 @@
 		},
 		"makefile.launchConfigurations": [
 			{
-				"cwd": "${workspaceFolder}../bin",
-				"binaryPath": "${workspaceFolder}../bin/stm32template.elf",
-				"includePath": [
-					"stm32core",
-					"stm32core/bsp",
-					"stm32core/bsp/CMSIS/Device/ST/STM32F0xx/Include",
-					"stm32core/bsp/CMSIS/Include",
-					"stm32core/bsp/STM32F0xx_StdPeriph_Driver/inc",
-				],
+				"cwd": "bin",
+				"binaryPath": "bin/stm32template.elf",
 				"binaryArgs": []
 			}
-		]
+		],
+		"makefile.configurationCachePath": "${workspaceFolder}\\IDE\\makecache.log",
+		"makefile.buildLog": ""
 	}
 }

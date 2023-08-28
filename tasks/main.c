@@ -1,4 +1,4 @@
-#include "stm32core/src/Application.h"
+#include "../Application.h"
 #include "stm32core/src/stm32f0xx_conf.h"
 #include "system_stm32f0xx.h"
 

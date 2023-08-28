@@ -1,3 +1,5 @@
+APPNAME := $(shell basename $(CURDIR))
+
 CORE := stm32core
 OBJECTS :=
 SOURCES :=

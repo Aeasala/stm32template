@@ -4,6 +4,10 @@ APPNAME := $(shell basename $(CURDIR))
 # Core folder name
 CORE := stm32core
 
+# make these variables scoped here before modules.mk
+SOURCES :=
+OBJECTS :=
+
 # Additional modules to compile (tasks by default, this is where main sits)
 include modules.mk
 

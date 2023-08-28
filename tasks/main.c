@@ -16,6 +16,7 @@ void SysTick_Handler(void) {
 	}
 }
 
+// This is the first C-defined function called by the startup.s asm file. (i.e. high-level entry point after bootloader)
 int main(void)
 {
 	RCC->AHBENR |= RCC_AHBENR_GPIOCEN; 	// enable the clock to GPIOC

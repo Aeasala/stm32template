@@ -1,23 +1,26 @@
 {
 	"folders": [
 		{
-			"path": ".."
+			"path": "../"
 		}
 	],
 	"settings": {
 		"files.associations": {
 			"*.h": "c",
 			"*.c": "c",
-			"*.a": "c"
+			"*.a": "bin"
 		},
-		"makefile.launchConfigurations": [
-			{
-				"cwd": "bin",
-				"binaryPath": "bin/stm32template.elf",
-				"binaryArgs": []
-			}
+		"C_Cpp.loggingLevel": "Debug",
+		"C_Cpp.default.includePath": [
+			"${workspaceFolder}",
+			"${workspaceFolder}/**",
+			"${workspaceFolder}/stm32core/**",
+			"${workspaceFolder}/stm32core/bsp/**",
+			"${workspaceFolder}/stm32core/bsp/CMSIS",
+			"${workspaceFolder}/stm32core/bsp/CMSIS/Include/**",
+			"${workspaceFolder}/stm32core/bsp/CMSIS/Device/ST/STM32F0xx/Include/**",
+			"${workspaceFolder}/stm32core/bsp/STM32F0xx_StdPeriph_Driver/**",
 		],
-		"makefile.configurationCachePath": "${workspaceFolder}\\IDE\\makecache.log",
-		"makefile.buildLog": ""
+		"C_Cpp.default.forcedInclude": ["stdint.h"]
 	}
 }

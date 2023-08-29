@@ -1,12 +1,15 @@
 #include "Application.h"
 #include "stm32core/stm32f0xx_conf.h"
 #include "system_stm32f0xx.h"
+#include "provinggrounds.h"
+#include "stm32core/util/debug.h"
 
 // SysTick_Handler is a defined interrupt label.  view src/dev/startup_stm32f0xx.s line 146 onward (g_pfnVectors) for available vectors
 void SysTick_Handler(void) {
 	static uint16_t tick = 0;
 	switch (tick++) {
 			case 10:
+				printf("\r\n oh man! \r\n");
 				GPIOC->ODR ^= (1 << 8);	// Flip one
 				break;
 			case 20:
@@ -19,6 +22,7 @@ void SysTick_Handler(void) {
 // This is the first C-defined function called by the startup.s asm file. (i.e. high-level entry point after bootloader)
 int main(void)
 {
+	Debug_init();
 	RCC->AHBENR |= RCC_AHBENR_GPIOCEN; 	// enable the clock to GPIOC
 	//(RM0091 lists this as IOPCEN, not GPIOCEN)
 
@@ -30,7 +34,7 @@ int main(void)
 
 	// SysTick: triggers SysTick_Handler every 1/n'th of a second, where this argument is (SystemCoreClock/n)
 	SysTick_Config(SystemCoreClock/10);
-
+	bufferStuff();
 	while(1)
 	{
 		// do nothing and rely on the systick interrupts for the routines.
